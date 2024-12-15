@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <h1 style="font-family: caviar;">Robnite</h1>
+        
+        <h2 style="grid-column: 3;" class="menu">SERIJE</h2>
+        <h2 style="grid-column: 4;" class="menu">FILMOVI</h2>
+        <h2 style="grid-column: 5;" class="menu"><a href="kontakt.html">KONTAKT</a></h2>
+
+        <div class="inputdiv" style="grid-column: 10; display: flex;justify-content: center;">
+        <img src="./photos/magnifying-glass-backup-svgrepo-com (1).svg" alt="" class="magnify" >
+        </div>
+
+        <h3><a href="login.html" style="color: #c03221;">Prijava</a></h3>
+        <h3><a href="login.html" style="color: #c03221">Registracija</a></h3>
+
+      
+    </nav>
+    <div style="max-width: 100vw; height: 92vh; display: flex; justify-content: center; align-items: center;">
+        <div style="width: 20%; height: 50%; box-shadow: 1px 1px 5px black; border-radius: 20px; display: flex;flex-direction: column; align-items: center;">
+            <h5 style="font-size: 30px;">Registracija</h5>
+            <form style="display: flex; flex-direction: column; gap: 20px;" id="userForma">
+                <input type="email"placeholder="Email" name="email" id="email">
+                <input type="password" placeholder="Lozinka" name="lozinka" id="lozinka">
+                <input type="password" placeholder="Potvrdi lozinku">
+                <button type="submit" style="padding: 15px 0px; background-color: #c03221; border: none; color: white; box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;;font-family: caviar;">PRIJAVA</button>
+            </form>
+        </div>
+    </div>
+    <script>
+         document.getElementById('userForma').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            const formData = new FormData(this);
+            const data = {
+                email: formData.get('email'),
+                password: formData.get('lozinka')
+            };
+
+            fetch('http://localhost:5000/api/form/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Form submitted successfully!');
+                console.log(data)
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>

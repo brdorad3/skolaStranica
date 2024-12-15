@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "MyWebApp.Controllers.FormController",
+    "Method": "SubmitForm",
+    "RelativePath": "api/Form/submit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "formData",
+        "Type": "MyWebApp.Models.FormData",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

@@ -1,0 +1,201 @@
+@font-face {
+    font-family: "Geosans";
+    src: local("GeosansLight.ttf"),
+      url("./GeosansLight.ttf") format("opentype");
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: "Blade";
+    src: local("BLADRMF_.TTF"),
+      url("./fonts/BLADRMF_.TTF") format("opentype");
+    
+  }
+  @font-face {
+    font-family: "Kapetan";
+    src: local("American Captain.ttf"),
+      url("./fonts/American\ Captain.ttf") format("opentype");
+    
+  }
+  @font-face {
+    font-family: "Batma";
+    src: local("batmfa__.ttf"),
+      url("./fonts/batmfa__.ttf") format("opentype");
+    
+  }
+  @font-face {
+    font-family: "Bebas";
+    src: local("American Captain.ttf"),
+      url("./fonts/BebasNeue-Regular.ttf") format("opentype");
+    
+  }
+  @font-face {
+    font-family: "Caviar";
+    src: local("American Captain.ttf"),
+      url("./fonts/CaviarDreams.ttf") format("opentype");
+    
+  }
+  @font-face {
+    font-family: "Code";
+    src: local("American Captain.ttf"),
+      url("./fonts/CODE\ Bold.otf") format("opentype");
+    
+  }
+  @font-face {
+    font-family: "Harabara";
+    src: local("American Captain.ttf"),
+      url("./fonts/Harabara\ Mais\ Demo.otf") format("opentype");
+    
+  }
+  @font-face {
+    font-family: "Lemon";
+    src: local("American Captain.ttf"),
+      url("./fonts/LEMONMILK-Regular.otf") format("opentype");
+    
+  }
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+nav{
+    height: 8%;
+    display: grid;
+    grid-template-columns: repeat(12, 90px);
+    justify-content:center;
+    align-items: center;
+    background-color: #222222;
+}
+nav > h1, h3 
+{
+    color: #c03221;
+
+}
+
+ul,li{
+    text-decoration: none;
+    list-style: none;
+}
+.regdiv{
+    display: flex;
+}
+
+h2{
+    font-weight: 400;
+    font-size: 16px;
+    font-family: "Geosans";
+    letter-spacing: 2px;
+
+}
+h3{
+    font-family: geosans;
+    cursor: pointer;
+}
+.magnify{
+    color: white;
+    fill: white;
+    width: 25px;
+    cursor: pointer;
+}
+
+  nav >h2{
+    color: white;
+    
+}
+.hero{
+    max-width: 100vw;
+    height: 92%;
+    background-image: url("./photos/870886.jpg");
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(12,90px);
+    grid-template-rows: repeat(12, minmax(0, 1fr));
+    justify-content: center;
+    position: relative;
+}
+.linija{
+    width: 520px;
+    height: 2px;
+    background: linear-gradient(to right, black, orange);
+}
+.zanr, .zanrovi{
+    font-family: Geosans;
+}
+.desc{
+    
+    grid-row: 7;
+    grid-column: 10/12;
+    font-family: Geosans;
+    text-align: center;
+    z-index: 10;
+}
+.gosling{
+    transform: rotate(-90deg);
+    grid-row: 9;
+    grid-column: 10;
+    font-family: Blade;
+    font-size: 100px;
+    color:white;
+    opacity: 0.6;
+    line-height: 0px;
+}
+.vise{
+    padding: 10px 30px;
+    border: 2px solid white;
+    background-color: transparent;
+    border-radius: 30px;
+    grid-row: 11;
+    color: white;
+    font-family: Geosans;
+    font-size: 15px;
+    margin-top: 50px;
+    position: absolute;
+    left: 47.5%;
+}
+.lista{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 407px;
+}
+.box{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+.karta{
+    width: 20%;
+    height: 250px;
+    background-color: white;
+    margin-bottom: 100px;
+    border-radius: 5px;
+}
+.karta > img{
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.karta:hover{
+  scale: 1.05;
+  cursor: pointer
+}
+.menu{
+  cursor: pointer;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+table{
+  width: 800px;
+  height: 150px;
+}
+input{
+  height: 35px;
+  padding-left: 5px;
+  border-radius: 1px;
+  border: none;
+  background-color: rgb(219, 216, 216);
+}
+form{
+  width: 80%;
+}
